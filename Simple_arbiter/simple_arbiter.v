@@ -11,7 +11,11 @@
                    may need concurrent access.
                 3) PCIe (Peripheral Component Interconnect Express) and CPU-to-high-speed interface communication (e.g., with memory controllers, DMA engines, or I/O peripherals) 
                    often involve arbitration because multiple agents may want access simultaneously.
+     
+ # Here the grant access  based upon the highest priority like if there are two  bit arbiter then ,
+   ( 2,1 ) grant are highest prority for req[0] ( grant <= 2'b10) and for req[1](grant <= 2'b01).
 */
+
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 module simple_arbiter(
        input wire clk,
