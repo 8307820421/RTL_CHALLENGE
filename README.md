@@ -42,7 +42,9 @@ Use MMCM when you need precise control of phase, multiple clock outputs with dif
 
 ➤ How It Works:
     Uses a stream of single-bit values (0 or 1)
+    
     High density of 1s = higher amplitude.
+    
     Low density of 1s = lower amplitude.
 
 
