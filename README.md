@@ -33,14 +33,6 @@ Duty cycle correction.
 Clock phase alignment.
 Spread spectrum support (in some devices).
 
-➤ Comparison with PLL:
-Feature	                            PLL	                                       MMCM
-Basic frequency synth             	✅	                                       ✅
-Phase shift	                        ✅ (coarse)	                               ✅ (fine)
-Duty cycle correct	                ❌                                         ✅ (fine)
-Spread spectrum	                    ❌	                                       ✅ (in some FPGAs)
-Jitter performance	               Good	                                       Better
-
 ➤ Use Case:
 Use MMCM when you need precise control of phase, multiple clock outputs with different frequencies/phases, or duty-cycle correction.
 
@@ -53,21 +45,10 @@ Use MMCM when you need precise control of phase, multiple clock outputs with dif
     High density of 1s = higher amplitude.
     Low density of 1s = lower amplitude.
 
-➤ Comparison to PWM:
- Feature	PWM	PDM:
- Signal Type	Variable-width pulses	Constant-rate, 1-bit pulses.
- Resolution	Based on width	Based on bit density.
- Application	Motor control, lighting	Audio (e.g., digital mics).
 
 ➤ Use Case:
    PDM is typically not used for clock generation (unlike PLL/MMCM). It is used for encoding analog signals into digital form using a 
    1-bit stream—commonly in voice and audio processing.
-
- #  🔁 Summary Table
-Term	         Type	                                   Function	                                                Common Use
-PLL	          Clocking	                    Lock to input clock,generate new clocks	                           Basic clock management
-MMCM	        Clocking	                    Advanced PLL with phase,duty cycle ctrl	                           Complex clock generation
-PDM	         Modulation	                    Convert analog to digital (1-bit stream)	                          Audio (e.g., microphones)
 
 # If you're working in Vivado or targeting a specific FPGA use case (e.g., clock generation, synchronization, or audio capture), let me know and I can tailor an example or recommendation.
 
