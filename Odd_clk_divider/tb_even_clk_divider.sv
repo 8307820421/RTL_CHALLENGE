@@ -1,6 +1,6 @@
 
 `timescale 1ns / 1ps
-module tb_even_clk_divider();
+module tb_odd_clk_divider();
  parameter N= 3;
  reg      odd_clk;
  reg      odd_reset;
@@ -23,7 +23,7 @@ end
 initial begin
         // Initialize reset
         $dumpfile("fractional_clock_divider.vcd");
-        $dumpvars(0, tb_even_clk_divider);
+ $dumpvars(0, tb_odd_clk_divider);
         
     odd_reset = 1'b1; // assert
     #10;
