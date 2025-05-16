@@ -22,7 +22,7 @@ end
 
 initial begin
         // Initialize reset
-        $dumpfile("fractional_clock_divider.vcd");
+ $dumpfile("clock_divider.vcd");
         $dumpvars(0, tb_even_clk_divider);
         
     even_reset = 1'b1; // assert
