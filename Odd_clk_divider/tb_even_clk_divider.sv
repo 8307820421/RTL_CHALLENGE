@@ -22,7 +22,7 @@ end
 
 initial begin
         // Initialize reset
-        $dumpfile("fractional_clock_divider.vcd");
+ $dumpfile("odd_clock_divider.vcd");
  $dumpvars(0, tb_odd_clk_divider);
         
     odd_reset = 1'b1; // assert
