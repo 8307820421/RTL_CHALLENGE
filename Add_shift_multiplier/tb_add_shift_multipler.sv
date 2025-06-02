@@ -9,7 +9,7 @@ reg [input_b_bit-1:0] b;
 wire [output_result_bit -1:0] result; // width depend upon a+b
 
 //-------------------------------dut creation------------------------------------------
-genric_add_shift #(
+add_shift_multiplier #(
 .input_a_bit(input_a_bit),
 .input_b_bit(input_b_bit),
 .output_result_bit(output_result_bit)
