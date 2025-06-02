@@ -1,19 +1,13 @@
 `timescale 1ns / 1ps
 module tb_add_shift_multipler();
-parameter input_a_bit = 4;
-parameter input_b_bit = 4;
-parameter output_result_bit = input_a_bit + input_b_bit;
+
 
 reg [input_a_bit-1:0] a;
 reg [input_b_bit-1:0] b;
 wire [output_result_bit -1:0] result; // width depend upon a+b
 
 //-------------------------------dut creation------------------------------------------
-add_shift_multiplier #(
-.input_a_bit(input_a_bit),
-.input_b_bit(input_b_bit),
-.output_result_bit(output_result_bit)
-)dut_ports(
+add_shift_multiplier dut_ports(
 .a(a),
 .b(b),
 .result(result)
