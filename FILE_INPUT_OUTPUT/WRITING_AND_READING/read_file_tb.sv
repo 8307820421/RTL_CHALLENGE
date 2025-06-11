@@ -4,7 +4,7 @@
                If taking the multi array or mem decleration to store individual column data
                the logic for location need to take care.
 */
-///////////////////////////////////////////////////////////////STEP(4)
+///////////////////////////////////////////////////////////////STEP(4)/////Reading TWO CCOLUMN ///
 
 //`timescale 1ns / 1ps
 // module read_file_tb();
@@ -22,11 +22,13 @@
 //     $fclose(file);
   
 //  /////////////////////////////////////////////Read type of operation
+
 //  file = $fopen("C:/Users/lenovo/OneDrive/Desktop/data.txt","r");
 //   $readmemh("C:/Users/lenovo/OneDrive/Desktop/data.txt",mem);
 //   $fclose(file);   /////////////////////////////////////////////////read type operation end
    
 //   /////////////$display
+
 //       for ( i = 0 ; i <=25 ; i = i+1)
 //       begin
 //           $display("%d", mem[i]); // printing the individual elelment of an array
@@ -56,6 +58,7 @@
      $fclose(file);
   
   /////////////////////////////////////////////Read type of operation
+   
   file = $fopen("C:/Users/lenovo/OneDrive/Desktop/data.txt","r");
    $readmemh("C:/Users/lenovo/OneDrive/Desktop/data.txt",mem);
    $fclose(file);   /////////////////////////////////////////////////read type operation end
